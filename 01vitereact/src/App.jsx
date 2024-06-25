@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // import User from "./User";
 // import Student from "./Student";
 // import Test from "./Test";
-// import Profile from "./Profile";
-import Login from "./Login";
+import Profile from "./Profile";
+// import Login from "./Login";
 
 function App() {
   // const [data, setData] = useState(null);
@@ -53,8 +53,8 @@ function App() {
         <button type="Submit">Submit</button>
       </form> */}
 
-      {/* <Profile /> */}
-      <Login />
+      <Profile />
+      {/* <Login /> */}
     </>
   );
 }
