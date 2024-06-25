@@ -1,13 +1,29 @@
-import React, {useState} from "react";
-import "./App.css";
-import {Button} from 'react-bootstrap'
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Bootstrap</h1>
-      <Button onClick={()=>alert("bootstrap is working fine")}>click me</Button>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "abc",
+    };
+    console.warn("constructor");
+  }
+  componentDidMount() {
+    console.warn("componentDidMount");
+  }
+
+  render() {
+    return (
+      <>
+        <h1>Component Did Mount {this.state.name}</h1>
+        <button
+          onClick={() => {
+            this.setState({ name: "xyz" });
+          }}
+        >Update</button>
+      </>
+    );
+  }
 }
+
 export default App;
