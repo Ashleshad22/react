@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import User from "./User";
+import React from "react";
 
-function App() {
-  function getData() {
-    alert("function as prop");
+class App extends React.Component {
+  constructor() {
+    super();
+    console.warn("constructor");
   }
 
-  return (
-    <>
-      <div style={{float:'right'}}>
-        <User data={getData} />
-      </div>
-    </>
-  );
+  render() {
+    return (
+      <>
+        <h1>Contructor life cycle method</h1>
+      </>
+    );
+  }
 }
 
 export default App;
