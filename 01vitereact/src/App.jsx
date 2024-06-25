@@ -1,8 +1,8 @@
 import Chai from "./Chai";
 import User from "./User";
 import Student from "./Student"
-import React,{useCallback, useState} from "react";
-
+import React,{useState} from "react";
+import Test from "./Test";
 function App() {
 
   const [name, setName] = useState("abc")
@@ -14,6 +14,7 @@ function App() {
       <User />
       <Student name={name} email={"abc@gmail.com"} />
       <button onClick={()=>{setName("XYZ")}}>Update name</button>
+      <Test/>
     </>
   );
 }
