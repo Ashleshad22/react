@@ -20,13 +20,11 @@ function App() {
             <td>Contact</td>
           </tr>
           {users.map((item, i) => (
-            item.contact === '111'?
             <tr key={i}>
               <td>{item.name}</td>
               <td>{item.email}</td>
               <td>{item.contact}</td>
-              </tr>
-              :null
+            </tr>
           ))}
         </tbody>
       </Table>
