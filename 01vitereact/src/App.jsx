@@ -1,29 +1,19 @@
-import React from "react";
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "abc",
-    };
-    console.warn("constructor");
+import "./App.css";
+import React, { useRef } from "react";
+import User from "./User";
+function App() {
+  let inputRef = useRef(null);
+  function updateInput() {
+    inputRef.current.value = "1000";
+    inputRef.current.style.color = "red";
+    inputRef.current.focus();
   }
-  componentDidMount() {
-    console.warn("componentDidMount");
-  }
-
-  render() {
-    return (
-      <>
-        <h1>Component Did Mount {this.state.name}</h1>
-        <button
-          onClick={() => {
-            this.setState({ name: "xyz" });
-          }}
-        >Update</button>
-      </>
-    );
-  }
+  return (
+    <div className="App">
+      <h1>forwardRef in React </h1>
+      <User ref={inputRef} />
+      <button onClick={updateInput}>Update Input Box</button>
+    </div>
+  );
 }
-
 export default App;

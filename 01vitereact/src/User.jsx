@@ -1,12 +1,11 @@
-import React from "react";
 
-function User(props) {
+import React, { forwardRef } from "react";
+function User(props, ref) {
   return (
     <div>
-      <h1>User Component</h1>
-      <button onClick={props.data}>Call Data function</button>
+      <input ref={ref} type="text" />
     </div>
   );
 }
 
-export default User;
+export default forwardRef(User);
