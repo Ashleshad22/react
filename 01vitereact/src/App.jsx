@@ -1,19 +1,24 @@
 import "./App.css";
 import React, { useRef } from "react";
-import User from "./User";
-function App() {
-  let inputRef = useRef(null);
-  function updateInput() {
-    inputRef.current.value = "1000";
-    inputRef.current.style.color = "red";
-    inputRef.current.focus();
+import { CommonContext } from "./CommonContext";
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      color: null,
+      updateColor: this.updateColor,
+    };
+    this.updateColor = () => {
+      this.setState({ color: "red" });
+    };
   }
-  return (
-    <div className="App">
-      <h1>forwardRef in React </h1>
-      <User ref={inputRef} />
-      <button onClick={updateInput}>Update Input Box</button>
-    </div>
-  );
+  render() {
+    return (
+      <CommonContext.Provider value={this.state}>
+        <h1>Context API tut</h1>
+      </CommonContext.Provider>
+    );
+  }
 }
 export default App;
