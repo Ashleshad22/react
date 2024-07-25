@@ -3,16 +3,6 @@ import React, { useRef } from "react";
 import { CommonContext } from "./CommonContext";
 
 class Main extends React.Component {
-  //   constructor() {
-  //     super();
-  //     this.state = {
-  //       color: null,
-  //       updateColor: this.updateColor,
-  //     };
-  //     this.updateColor = () => {
-  //       this.setState({ color: "red" });
-  //     };
-  //   }
   render() {
     return (
       <CommonContext.Consumer>
