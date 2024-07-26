@@ -6,7 +6,9 @@ class Main extends React.Component {
   render() {
     return (
       <CommonContext.Consumer>
-        <h1>Context API tut</h1>
+        {({ color }) => {
+          <h1>Hello this is index</h1>;
+        }}
       </CommonContext.Consumer>
     );
   }
